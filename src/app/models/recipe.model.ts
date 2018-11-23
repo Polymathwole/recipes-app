@@ -1,11 +1,6 @@
-export class Recipe {
-    public name: string;
-    public description: string;
-    public imagePath: string;
+import { Ingredient } from './ingredient.model';
 
-    constructor(nam: string, desc: string, path: string) {
-        this.name = nam;
-        this.description = desc;
-        this.imagePath = path;
+export class Recipe {
+    constructor(public name: string, public description: string, public imagePath: string, public ingredients: Ingredient[]) {
     }
 }

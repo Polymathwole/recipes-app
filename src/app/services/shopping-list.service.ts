@@ -11,10 +11,13 @@ export class ShoppingListService {
   ];
   itemAdded = new EventEmitter();
 
-  constructor() { }
-
   addItem(data: Ingredient) {
     this.ingredients.push(data);
+    this.itemAdded.emit();
+  }
+
+  addItems(ingredients: Ingredient[]) {
+    this.ingredients.push(...ingredients);
     this.itemAdded.emit();
   }
 
