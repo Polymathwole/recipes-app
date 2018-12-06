@@ -6,9 +6,10 @@
 <hr>
 <div class="row">
     <div class="col-12">
-        <app-recipe-item 
-        *ngFor="let r of recipes" 
-        [recipe] = "r" 
+        <app-recipe-item
+        *ngFor="let r of recipes; index as i"
+        [recipe] = "r"
+        [ind] = "i"
         ></app-recipe-item>
     </div>
 </div>
