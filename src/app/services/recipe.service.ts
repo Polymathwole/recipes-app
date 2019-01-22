@@ -40,6 +40,11 @@ export class RecipeService {
     return this.recipes[id];
   }
 
+  setRecipes(newRecipes: Recipe[]) {
+    this.recipes = newRecipes;
+    this.recipeChanged.next();
+  }
+
   updateRecipe(index: number, newRecipe: Recipe) {
     this.recipes[index] = newRecipe;
     this.recipeChanged.next();
