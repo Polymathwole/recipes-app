@@ -21,7 +21,7 @@ export class DataStorageService {
       res => {
         const recips: Recipe[] = res.json();
 
-        for (let r of recips) {
+        for (const r of recips) {
           if (!r.ingredients) {
             r.ingredients = [];
           }
